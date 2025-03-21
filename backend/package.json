@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,13 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "globals": "^16.0.0"
+    "globals": "^16.0.0",
+    "module-alias": "^2.2.3"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@routes": "@root/src/routes",
+    "@controllers": "@root/src/controllers",
+    "@models": "@root/src/models"
   }
 }
